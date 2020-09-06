@@ -14,7 +14,7 @@ SLACKHOOK=https://hooks.slack.com/services/TN06MGT6H/BN25GTPSB/8q40kKT9Re0Ux3WRg
 
 function check_wildcard() {
 	if [[ "$(dig @1.1.1.1 A,CNAME {test321123,testingforwildcard,plsdontgimmearesult}.$RECON_DOMAIN +short | wc -l)" -gt "1" ]]; then
-		echo "Wildcard detected .. Existing :( "
+		echo "Wildcard detected .. Exiting :( "
 		exit 1
 	fi
 }
